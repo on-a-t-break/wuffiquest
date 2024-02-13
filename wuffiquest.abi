@@ -1,0 +1,423 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "_config_entity",
+            "base": "",
+            "fields": [
+                {
+                    "name": "params",
+                    "type": "cfg_params"
+                }
+            ]
+        },
+        {
+            "name": "_crafts_entity",
+            "base": "",
+            "fields": [
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "cost",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "odds",
+                    "type": "int64[]"
+                },
+                {
+                    "name": "uses",
+                    "type": "uint64"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                },
+                {
+                    "name": "time",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "_leaderboard_entity",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "roll_count",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "_rolls_entity",
+            "base": "",
+            "fields": [
+                {
+                    "name": "index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "roll_count",
+                    "type": "uint64"
+                },
+                {
+                    "name": "rolled",
+                    "type": "bool"
+                },
+                {
+                    "name": "seed",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "_tracker_entity",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tokens_burnt",
+                    "type": "asset"
+                },
+                {
+                    "name": "tokens_total",
+                    "type": "asset"
+                },
+                {
+                    "name": "distribution",
+                    "type": "float64"
+                }
+            ]
+        },
+        {
+            "name": "activecraft",
+            "base": "",
+            "fields": [
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "addcraft",
+            "base": "",
+            "fields": [
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "cost",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "odds",
+                    "type": "int64[]"
+                },
+                {
+                    "name": "uses",
+                    "type": "uint64"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                },
+                {
+                    "name": "time",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "cfg_params",
+            "base": "",
+            "fields": [
+                {
+                    "name": "allowed_token",
+                    "type": "extended_asset"
+                }
+            ]
+        },
+        {
+            "name": "cfgdestruct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "cfginit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "cfgsetparams",
+            "base": "",
+            "fields": [
+                {
+                    "name": "params",
+                    "type": "cfg_params"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "performroll",
+            "base": "",
+            "fields": [
+                {
+                    "name": "index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "receiverand",
+            "base": "",
+            "fields": [
+                {
+                    "name": "index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "random_value",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "rmvcraft",
+            "base": "",
+            "fields": [
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "trackdest",
+            "base": "",
+            "fields": [
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "trackinit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "trackset",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tokens_burnt",
+                    "type": "asset"
+                },
+                {
+                    "name": "tokens_total",
+                    "type": "asset"
+                },
+                {
+                    "name": "distribution",
+                    "type": "float64"
+                }
+            ]
+        },
+        {
+            "name": "updatescore",
+            "base": "",
+            "fields": [
+                {
+                    "name": "index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "usecraft",
+            "base": "",
+            "fields": [
+                {
+                    "name": "craft_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "activecraft",
+            "type": "activecraft",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addcraft",
+            "type": "addcraft",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cfgdestruct",
+            "type": "cfgdestruct",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cfginit",
+            "type": "cfginit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cfgsetparams",
+            "type": "cfgsetparams",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "performroll",
+            "type": "performroll",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "receiverand",
+            "type": "receiverand",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmvcraft",
+            "type": "rmvcraft",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "trackdest",
+            "type": "trackdest",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "trackinit",
+            "type": "trackinit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "trackset",
+            "type": "trackset",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "updatescore",
+            "type": "updatescore",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "usecraft",
+            "type": "usecraft",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "config",
+            "type": "_config_entity",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "crafts",
+            "type": "_crafts_entity",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "leaderboard",
+            "type": "_leaderboard_entity",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "rolls",
+            "type": "_rolls_entity",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "tracker",
+            "type": "_tracker_entity",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
