@@ -112,7 +112,13 @@ void wuffiquest::performroll(uint64_t & index, eosio::name & owner)
         row.roll_count = result;
     });
 
-    
+    auto _tracker = get_tracker();
+    auto new_tracker = _tracker.get();
+
+    new_tracker.tokens_total.amount += crafts_itr->cost.quantity.amount;
+
+    _tracker.set(new_tracker, get_self());
+
 }
 
 void wuffiquest::updatescore(uint64_t & index, eosio::name & owner)
